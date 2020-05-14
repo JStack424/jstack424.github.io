@@ -1,0 +1,46 @@
+{
+  "name": "jstack424.github.io",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "./node_modules/webpack/bin/webpack.js --watch",
+    "build": "./node_modules/webpack/bin/webpack.js",
+    "flow": "./node_modules/flow-bin/flow-osx-v0.125.1/flow",
+    "prettier": "npx prettier --write ./src/*"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jstack424/jstack424.github.io.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jstack424/jstack424.github.io/issues"
+  },
+  "homepage": "https://github.com/jstack424/jstack424.github.io#readme",
+  "dependencies": {
+    "flow-bin": "^0.125.1",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-recoil": "^0.7.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.1.0",
+    "@babel/core": "^7.1.0",
+    "@babel/plugin-proposal-class-properties": "^7.8.3",
+    "@babel/preset-env": "^7.1.0",
+    "@babel/preset-flow": "^7.9.0",
+    "@babel/preset-react": "^7.0.0",
+    "babel-loader": "^8.0.2",
+    "css-loader": "^1.0.0",
+    "husky": "^4.2.5",
+    "prettier": "^2.0.5",
+    "style-loader": "^0.23.0",
+    "webpack": "^4.43.0",
+    "webpack-cli": "^3.3.11",
+    "webpack-dev-server": "^3.11.0"
+  }
+}
