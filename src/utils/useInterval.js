@@ -1,4 +1,5 @@
-// @flow
+// @flow strict
+
 'use strict';
 
 import React, { useState, useEffect, useRef } from 'react';
