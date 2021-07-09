@@ -1,13 +1,14 @@
 #AboutPage {
   display: flex;
   height: 100%;
-
   font-family: 'Architects Daughter';
 }
 
 #AboutPage #LeftColumn {
   width: 400px;
   border-right: 2px solid black;
+  position: sticky;
+  top: 0;
 
   display: flex;
   flex-direction: column;
@@ -27,9 +28,42 @@
 }
 
 #AboutPage #LeftColumn #Details {
+  margin-top: 12px;
   font-size: 1.2em;
 }
 
-img {
+#AboutPage #RightColumn {
+  display: flex;
+  flex-direction: column;
+  overflow: scroll;
+  width: 100%;
+  padding: 40px 20px;
+}
+
+.InfoBox {
+  display: flex;
+  flex-direction: row;
+  height: 200px;
+  margin-bottom: 20px;
+  background-color: rgba(255, 255, 255, 0.5);
+  padding: 8px;
+  border: 1px solid black;
+  border-radius: 8px;
+}
+
+.InfoBox .Image {
   width: 200px;
+}
+
+.InfoBox .Image img {
+  height: 100%;
+  width: 100%;
+  border-radius: 8px;
+  margin: auto;
+}
+
+.InfoBox .Text {
+  display: flex;
+  flex-direction: column;
+  margin: 0 12px;
 }

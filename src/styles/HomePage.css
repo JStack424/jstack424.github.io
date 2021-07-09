@@ -9,3 +9,13 @@
   background: linear-gradient(white, rgb(84, 120, 252));
   overflow: scroll;
 }
+
+.Headline {
+  font-size: 28px;
+  font-weight: bold;
+  color: rgb(236, 28, 255);
+}
+
+.Body {
+  font-size: 20px;
+}

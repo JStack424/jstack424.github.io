@@ -57,7 +57,7 @@ export default function PresentsPage(props: {
 
   return (
     <div id="PresentsPage">
-      <Present key={0} image="swing" name="Neck Pillow" password="test1" />
+      <Present key={0} image="neckpillow" name="Neck Pillow" password="test1" />
       <Present
         key={1}
         image="swing"

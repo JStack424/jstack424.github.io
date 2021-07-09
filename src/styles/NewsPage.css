@@ -5,10 +5,11 @@
   flex-wrap: wrap;
   justify-content: space-evenly;
   font-family: 'Forum';
+  padding: 40px 0;
 }
 
 .Article {
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0.6);
   margin: 12px;
   padding: 8px;
   border: 1px solid black;
@@ -36,14 +37,4 @@
 .Article .Date {
   font-size: 18px;
   margin-bottom: 4px;
-}
-
-.Article .Headline {
-  font-size: 28px;
-  font-weight: bold;
-  color: rgb(236, 28, 255);
-}
-
-.Article .Body {
-  font-size: 20px;
 }
