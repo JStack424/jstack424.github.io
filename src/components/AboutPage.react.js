@@ -10,7 +10,7 @@ import Image from '~/components/Image.react';
 export default function AboutPage(): React.MixedElement {
   return (
     <>
-      <Image name="emily1" size={200} />
+      <Image name="emily1" />
     </>
   );
 }

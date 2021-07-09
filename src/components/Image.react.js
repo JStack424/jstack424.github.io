@@ -6,7 +6,7 @@ import * as React from 'react';
 
 export default function Image(props: {
   name: string,
-  size: number,
+  className?: string,
 }): React.MixedElement {
-  return <img src={`images/${props.name}.jpg`} width={props.size} />;
+  return <img className={props.className} src={`images/${props.name}.jpg`} />;
 }
