@@ -4,16 +4,21 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
-  align-items: flex-start;
+  font-family: 'Forum';
 }
 
 .Article {
   background-color: white;
   margin: 12px;
-  padding: 12px;
+  padding: 8px;
   border: 1px solid black;
   border-radius: 8px;
-  width: 400px;
+  width: 420px;
+  text-align: justify;
+}
+
+.Article .Text {
+  padding: 8px;
 }
 
 .Article .Image {
@@ -29,7 +34,8 @@
 }
 
 .Article .Date {
-  font-size: 14px;
+  font-size: 18px;
+  margin-bottom: 4px;
 }
 
 .Article .Headline {
