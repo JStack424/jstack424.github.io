@@ -6,23 +6,24 @@ import * as React from 'react';
 import { useState, useCallback } from 'react';
 
 import JDSToolbar from '~/components/JDS/JDSToolbar.react';
+import AboutPage from '~/components/AboutPage.react';
+import NewsPage from '~/components/NewsPage.react';
+import PresentsPage from '~/components/PresentsPage.react';
 
 import '~/styles/HomePage.css';
 
 type TabType = 'About' | 'News' | 'Presents';
 
-function EmbedContent(): React.MixedElement {
-  return <img src="images/emily1.jpg" width={100} />;
-}
-
 function PageContents({ selectedTabID }: { selectedTabID: TabType }) {
   switch (selectedTabID) {
     case 'About':
-      return <EmbedContent />;
+      return <AboutPage />;
     case 'News':
+      return <NewsPage />;
     case 'Presents':
+      return <PresentsPage />;
   }
-  return selectedTabID;
+  throw new Error('Page not implemented: ' + selectedTabID);
 }
 
 export default function HomePage(): React.MixedElement {
