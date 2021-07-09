@@ -4,7 +4,6 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "start": "./node_modules/webpack/bin/webpack.js --watch",
     "build": "./node_modules/webpack/bin/webpack.js",
     "flow": "./node_modules/flow-bin/flow-osx-v0.125.1/flow",

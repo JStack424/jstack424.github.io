@@ -1,27 +1,4 @@
-/** @format */
-
-.JDSToolbar {
-  display: flex;
-  font-weight: bold;
-  width: 100%;
-}
-
-.JDSToolbarButton {
-  background-color: rgb(236, 239, 250);
-  padding: 4px;
-  flex: 1;
-  font-size: 'large';
-}
-
-.JDSToolbarButton:focus {
-  outline: none;
-}
-
-.JDSToolbarButton.selected {
-  background-color: rgb(178, 181, 190);
-}
-
-.welcome {
+body {
   height: 100%;
   width: 100%;
   left: 0;
@@ -29,6 +6,8 @@
   top: 0;
   bottom: 0;
   position: absolute;
+  overflow: scroll;
+  margin: 0;
   background: linear-gradient(
     124deg,
     #ff2400,
@@ -42,12 +21,9 @@
     #dd00f3
   );
   background-size: 1800% 1800%;
-
-  -webkit-animation: rainbow 18s ease infinite;
-  -z-animation: rainbow 18s ease infinite;
-  -o-animation: rainbow 18s ease infinite;
-  animation: rainbow 18s ease infinite;
+  animation: rainbow 36s ease infinite;
 }
+
 @keyframes rainbow {
   0% {
     background-position: 0% 82%;
@@ -58,4 +34,9 @@
   100% {
     background-position: 0% 82%;
   }
+}
+
+.oops {
+  text-align: center;
+  margin-top: 10%;
 }

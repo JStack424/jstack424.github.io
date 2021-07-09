@@ -4,9 +4,9 @@
 
 import * as React from 'react';
 import { useState } from 'react';
-import JDSTextInput from './JDSTextInput.react';
+import JDSTextInput from '~/components/JDS/JDSTextInput.react';
 
-const TODOS: Array<string> = ['Stylex', 'Flow', 'Hot Reload'];
+const TODOS: Array<string> = ['Stylex', 'Hot Reload'];
 
 function TodoList(): React.MixedElement {
   const [todos, setTodos] = useState(TODOS);

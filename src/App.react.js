@@ -3,30 +3,55 @@
 'use strict';
 
 import * as React from 'react';
-import { useState } from 'react';
-import useInterval from './utils/useInterval';
+import { useState, useCallback } from 'react';
 
-import JDSCounter from './JDScomponents/JDSCounter.react';
-import JDSTodoList from './JDScomponents/JDSTodoList.react';
-import JDSToolbar from './JDSComponents/JDSToolbar.react';
-import WelcomePage from './WelcomePage.react';
+import useInterval from '~/utils/useInterval';
+import WelcomePage from '~/components/WelcomePage.react';
+import HomePage from '~/components/HomePage.react';
 
-import './styles/App.css';
+import '~/styles/App.css';
+
+let broken = false;
+
+class ErrorBoundary extends React.Component<
+  { children: React.Node },
+  { hasError: boolean }
+> {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+
+  componentDidCatch(error, info) {
+    if (!broken) {
+      alert('If you see this, I fucked something up :)');
+    }
+    broken = true;
+    this.setState({ hasError: true });
+  }
+
+  render() {
+    if (this.state.hasError) {
+      return <h1 className="oops">OOPS :(</h1>;
+    }
+    return this.props.children;
+  }
+}
 
 export default function App(): React.MixedElement {
-  const [pageID, setPageID] = useState('welcome');
-  console.log(pageID);
+  const [pageID, setPageID] = useState<string>('welcome');
+  const onEnterClick = useCallback(() => setPageID('home'), [
+    pageID,
+    setPageID,
+  ]);
+  let contents = null;
   switch (pageID) {
     case 'welcome':
-      return <WelcomePage />;
+      contents = <WelcomePage onEnterClick={onEnterClick} />;
+      break;
+    case 'home':
+      contents = <HomePage />;
+      break;
   }
-  return (
-    <JDSToolbar
-      items={[
-        { label: 'Counter', contents: <JDSCounter /> },
-        { label: 'Todo List', contents: <JDSTodoList /> },
-        { label: 'Something Else', contents: null },
-      ]}
-    />
-  );
+  return <ErrorBoundary>{contents}</ErrorBoundary>;
 }
