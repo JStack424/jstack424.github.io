@@ -2,16 +2,24 @@
 
 'use strict';
 
-import React, { Component, useState } from 'react';
+import * as React from 'react';
+import { useState } from 'react';
 import useInterval from './utils/useInterval';
 
 import JDSCounter from './JDScomponents/JDSCounter.react';
 import JDSTodoList from './JDScomponents/JDSTodoList.react';
 import JDSToolbar from './JDSComponents/JDSToolbar.react';
+import WelcomePage from './WelcomePage.react';
 
-import './App.css';
+import './styles/App.css';
 
-function App() {
+export default function App(): React.MixedElement {
+  const [pageID, setPageID] = useState('welcome');
+  console.log(pageID);
+  switch (pageID) {
+    case 'welcome':
+      return <WelcomePage />;
+  }
   return (
     <JDSToolbar
       items={[
@@ -22,5 +30,3 @@ function App() {
     />
   );
 }
-
-export default App;

@@ -1,0 +1,8 @@
+{
+  "editor.tabSize": 2,
+  "javascript.referencesCodeLens.enabled": true,
+  "typescript.format.enable": false,
+  "editor.formatOnSave": true,
+  "flow.showUncovered": true,
+  "flow.coverageSeverity": "error"
+}

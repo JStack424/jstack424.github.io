@@ -1,10 +1,11 @@
 // @flow strict
 
-import React, { useState } from 'react';
+'use strict';
 
-('use strict');
+import * as React from 'react';
+import { useState } from 'react';
 
-function JDSCounter() {
+function JDSCounter(): React.MixedElement {
   const [count, setCount] = useState(0);
   return (
     <div>

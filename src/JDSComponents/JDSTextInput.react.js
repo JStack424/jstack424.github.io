@@ -2,12 +2,13 @@
 
 'use strict';
 
-import React, { useState } from 'react';
+import * as React from 'react';
+import { useState } from 'react';
 
 function JDSTextInput(props: {
   showButton?: boolean,
   onSubmit: (string) => void,
-}) {
+}): React.MixedElement {
   const [val, setVal] = useState('');
 
   return (

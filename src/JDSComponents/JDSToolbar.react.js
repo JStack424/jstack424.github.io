@@ -2,7 +2,8 @@
 
 'use strict';
 
-import React, { useState } from 'react';
+import * as React from 'react';
+import { useState } from 'react';
 
 type JDSToolbarItemConfig = {
   contents: React$Node,
@@ -27,7 +28,9 @@ function JDSToolbarItem(props: {
   );
 }
 
-function JDSToolbar(props: { items: Array<JDSToolbarItemConfig> }) {
+export default function JDSToolbar(props: {
+  items: Array<JDSToolbarItemConfig>,
+}): React.MixedElement {
   const [currentTab, setCurrentTab] = useState('');
   let pageContents = null;
   return (
@@ -63,5 +66,3 @@ function JDSToolbar(props: { items: Array<JDSToolbarItemConfig> }) {
     </>
   );
 }
-
-export default JDSToolbar;

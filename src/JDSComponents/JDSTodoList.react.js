@@ -1,14 +1,14 @@
 // @flow strict
 
-import React, { useState } from 'react';
+'use strict';
 
+import * as React from 'react';
+import { useState } from 'react';
 import JDSTextInput from './JDSTextInput.react';
-
-('use strict');
 
 const TODOS: Array<string> = ['Stylex', 'Flow', 'Hot Reload'];
 
-function TodoList() {
+function TodoList(): React.MixedElement {
   const [todos, setTodos] = useState(TODOS);
   return (
     <div>
