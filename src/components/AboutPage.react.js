@@ -23,8 +23,8 @@ export default function AboutPage(): React.MixedElement {
         <h1>Emily Jing</h1>
         <Image name="headshot" />
         <div id="Details">
-          {DETAILS.map((detail) => (
-            <li>{detail[0] + '  -  ' + detail[1]}</li>
+          {DETAILS.map((detail, idx) => (
+            <li key={idx}>{detail[0] + '  -  ' + detail[1]}</li>
           ))}
         </div>
       </div>

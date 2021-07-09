@@ -21,8 +21,8 @@ const STORIES: Array<ArticleProps> = [
       "the greatest singer/songwriter of our generation, and if you don't believe it then you must not have heard her sing yet!",
   },
   {
-    images: ['emily1'],
-    date: '8 hours',
+    images: ['yellowcar'],
+    date: 'Mar 7, 2021',
     headline: 'headline',
     body: 'body',
   },
