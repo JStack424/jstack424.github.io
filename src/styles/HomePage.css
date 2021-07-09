@@ -2,6 +2,19 @@
   display: flex;
   flex-direction: column;
   height: 100%;
+
+  animation: fadeInAnimation ease-in 5s 2.5s;
+  animation-iteration-count: 1;
+  animation-fill-mode: both;
+}
+
+@keyframes fadeInAnimation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 #Home .Contents {

@@ -20,20 +20,20 @@ const STORIES: Array<ArticleProps> = [
     this child will grow up to be the most beautiful and intelligent being of all time. We can only imagine what joys her life will bring.`,
   },
   {
-    images: ['license'],
-    date: 'May 30, 2013',
-    headline: 'Teen Driver Excited To See Friends',
-    body: `Emily Jing, a local high schooler, got her driver's license last week just like she always talked about. Her friends say they were so excited
-    for her to drive up to their house, however she was seen earlier this afternoon driving through the suburbs crying because they weren't around.
-    Our hearts go out to Emily in this tough time, hopefully she can make a hit song out of this tragic story.`,
-  },
-  {
     images: ['glowup', 'glowup2'],
     date: 'May 23, 2013',
     headline: '10 Tips To Maximize Your Glow-Up',
     body: `Attention high schoolers: do you ever look in the mirror and think "Ugh I look like such a nerd"? Well there's no need to worry
     because we've got a foolproof technique to help you glow-up, invented by our very own Emily Jing. As you can see by her stunning smile,
     gorgeous hair, and killer bod, it works wonders. Subscribe now for only $10 a month to get your personalized glow-up-guide.`,
+  },
+  {
+    images: ['license'],
+    date: 'May 30, 2013',
+    headline: 'Teen Driver Excited To See Friends',
+    body: `Emily Jing, a local high schooler, got her driver's license last week just like she always talked about. Her friends say they were so excited
+    for her to drive up to their house, however she was seen earlier this afternoon driving through the suburbs crying because they weren't around.
+    Our hearts go out to Emily in this tough time, hopefully she can make a hit song out of this tragic story.`,
   },
   {
     images: ['careerfair'],
@@ -49,7 +49,7 @@ const STORIES: Array<ArticleProps> = [
     headline: 'Missing Airplane Carrying Supermodels Recovered Safely',
     body: `Late last month an airplane mysteriously vanished on it's way to Las Vegas for the annual "Prettiest Woman Alive" competition. On board
     were 6 of the most beautiful women anyone's ever seen, and among them was this year's expected winner: Emily Jing. During this morning's rescue the
-    women all said that Emily's leadership and determination kept them all safe through the scorching desert heat. Although the competition is over, the academy
+    women all said that Emily's leadership and determination kept them safe through the scorching desert heat. Although the competition is over, the academy
     retroactively awarded Emily the 1st prize medal for her heroic acts.`,
   },
   {
@@ -58,7 +58,8 @@ const STORIES: Array<ArticleProps> = [
     headline: 'Tempetations win the ICCA Southwest Competition',
     body: `This monumental achievement sets a new record for the Tempetations, an elite a cappella group from ASU.
     None of it would have been possible without their secret weapon, Emily Jing. Some people have been calling her
-    the greatest singer/songwriter of our generation, and if you don't believe it then you must not have heard her sing yet!`,
+    the greatest singer/songwriter of our generation. If you don't believe it you must not have heard her voice yet!
+    It's smooth melodic tone has been known to end wars, cure disease, and even make distracted boyfriends pay attention.`,
   },
   {
     images: ['apple'],
@@ -88,9 +89,9 @@ const STORIES: Array<ArticleProps> = [
     images: ['helicopter'],
     date: 'Nov 25, 2020',
     headline: 'Fearless Heli Pilot Saves Man Stranded Near Volcano',
-    body: `During a routine supply flight around Hawaii's Maunaloa volcano, veteran pilot Emily Jing noticed a distress signal from below.
+    body: `During a routine supply flight around Hawaii's Mauna Kea volcano, veteran pilot Emily Jing noticed a distress signal from below.
     Against all odds, she landed the helicopter on rough terrain and saved a man who had ventured too far and gotten lost. The man, pictured
-    here, said she was "the most beautiful woman" he'd ever seen and he "dreams of seeing her again someday".
+    here, said she was "the most beautiful woman" he'd ever seen and that he "dreams of seeing her again someday".
     `,
   },
   {
