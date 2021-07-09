@@ -20,7 +20,7 @@ function PageContents({ selectedTabID }: { selectedTabID: TabType }) {
     case 'About':
       return <AboutPage />;
     case 'News':
-      return <NewsPage />;
+      return <NewsPage unlockedItems={unlockedItems} />;
     case 'Presents':
       return (
         <PresentsPage

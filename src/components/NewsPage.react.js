@@ -13,6 +13,7 @@ import '~/styles/NewsPage.css';
 
 const STORIES: Array<ArticleProps> = [
   {
+    secretLetter: 's',
     images: ['baby'],
     date: 'Jul 9, 1996',
     headline: 'The Birth Of A Goddess',
@@ -20,6 +21,7 @@ const STORIES: Array<ArticleProps> = [
     this child will grow up to be the most beautiful and intelligent being of all time. We can only imagine what joys her life will bring.`,
   },
   {
+    secretLetter: 'y',
     images: ['glowup', 'glowup2'],
     date: 'May 23, 2013',
     headline: '10 Tips To Maximize Your Glow-Up',
@@ -28,6 +30,7 @@ const STORIES: Array<ArticleProps> = [
     gorgeous hair, and killer bod, it works wonders. Subscribe now for only $10 a month to get your personalized glow-up-guide.`,
   },
   {
+    secretLetter: 'x',
     images: ['license'],
     date: 'May 30, 2013',
     headline: 'Teen Driver Excited To See Friends',
@@ -36,14 +39,16 @@ const STORIES: Array<ArticleProps> = [
     Our hearts go out to Emily in this tough time, hopefully she can make a hit song out of this tragic story.`,
   },
   {
+    secretLetter: '!',
     images: ['careerfair'],
-    date: 'Sponsored',
+    date: 'Sep 15, 2016',
     headline: 'Looking For a Job? Look No Further!',
     body: `Here at SCMA, we believe that finding a job should be easy. That's why our #SCMAcareerfair is known nationwide for getting students
     offers from companies like Abbott, Apple, and even Square! If you're still unsure of your future come try our patented position pairing process
     for a guaranteed job offer! And if we can't get you a job, we'll just get you airpods instead.`,
   },
   {
+    secretLetter: 'y',
     images: ['plane'],
     date: 'Nov 11, 2016',
     headline: 'Missing Airplane Carrying Supermodels Recovered Safely',
@@ -53,6 +58,7 @@ const STORIES: Array<ArticleProps> = [
     retroactively awarded Emily the 1st prize medal for her heroic acts.`,
   },
   {
+    secretLetter: 'e',
     images: ['icca1', 'icca2', 'icca3', 'icca4'],
     date: 'Feb 18, 2018',
     headline: 'Tempetations win the ICCA Southwest Competition',
@@ -62,12 +68,23 @@ const STORIES: Array<ArticleProps> = [
     It's smooth melodic tone has been known to end wars, cure disease, and even make distracted boyfriends pay attention.`,
   },
   {
+    secretLetter: 'e',
     images: ['apple'],
     date: 'Mar 27, 2020',
     headline: 'Apple Announces First Ever Female CEO',
     body: `In a shocking turn of events Apple CEO Tim Cook is being forced to step down. The board has named Emily Jing as his replacement,
     saying she is "better in every way". In an exclusive interview Tim told us that he believes it was the right move, saying "I've never met anyone
     like her". Check back in the coming weeks to find out more about Emily.`,
+  },
+  {
+    secretLetter: 'h',
+    lockedCondition: 'Neck Pillow (duh)',
+    images: ['surprise'],
+    date: 'Surprise',
+    headline: 'Hey you, hey you! Look down here for what you need to do!',
+    body: `Now that you've found me, the next part's a breeze. This might sound silly, but go get some cheese.
+    On the bag are some numbers, what could they mean? Perhaps they have something to do with this screen.
+    `,
   },
   {
     images: ['surfing1', 'surfing2'],
@@ -104,17 +121,30 @@ const STORIES: Array<ArticleProps> = [
   },
 ];
 
-export default function NewsPage(): React.MixedElement {
+export default function NewsPage(props: {
+  unlockedItems: Array<string>,
+}): React.MixedElement {
   return (
     <div id="NewsBody">
-      {STORIES.map((article, idx) => (
-        <Article key={idx} {...article} />
-      ))}
+      {STORIES.map((article, idx) =>
+        article.lockedCondition == null ||
+        props.unlockedItems.includes(article.lockedCondition) ||
+        window.location.href.includes('dev=1') ? (
+          <Article
+            key={idx}
+            {...article}
+            showSecretLetter={props.unlockedItems.includes('Neck Pillow (duh)')}
+          />
+        ) : null
+      )}
     </div>
   );
 }
 
 type ArticleProps = {
+  lockedCondition?: string,
+  showSecretLetter?: boolean,
+  secretLetter?: string,
   images: Array<string>,
   date: string,
   headline: string,
@@ -122,7 +152,14 @@ type ArticleProps = {
 };
 function Article(props: ArticleProps): React.MixedElement {
   return (
-    <div className="Article">
+    <div
+      className="Article"
+      title={
+        props.showSecretLetter == true && props.secretLetter != null
+          ? props.secretLetter
+          : null
+      }
+    >
       <div className="Image">
         {props.images.length > 0 ? (
           <RotatingImage names={props.images} />

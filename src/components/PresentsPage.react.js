@@ -16,17 +16,10 @@ type PresentType = {
   name: string,
 };
 
-const PRESENTS: Array<PresentType> = [
-  { image: 'neckpillow', name: 'Neck Pillow' },
-  { image: 'snowboardgoggles', name: 'Snowboard Goggles' },
-  { image: 'efoil', name: '1.5hr E-Foil Lesson Together' },
-];
-
 export default function PresentsPage(props: {
   unlockedItems: Array<string>,
   setUnlockedItems: (Array<string>) => void,
 }): React.MixedElement {
-  console.log(props.unlockedItems);
   function Present(innerProps: {
     password: string,
     image: string,
@@ -43,7 +36,7 @@ export default function PresentsPage(props: {
     }, [innerProps.password, props.setUnlockedItems, props.unlockedItems]);
 
     return !props.unlockedItems.includes(innerProps.name) ? (
-      <div className="Present" onClick={onClick}>
+      <div className="Present Locked" onClick={onClick}>
         <Image name="locked" />
         <h2>???</h2>
       </div>
@@ -57,18 +50,18 @@ export default function PresentsPage(props: {
 
   return (
     <div id="PresentsPage">
-      <Present key={0} image="neckpillow" name="Neck Pillow" password="test1" />
       <Present
-        key={1}
-        image="swing"
-        name="Snowboard Goggles"
-        password="test2"
+        key={0}
+        image="secret1"
+        name="Neck Pillow (duh)"
+        password="goodluck"
       />
+      <Present key={1} image="secret2" name="Find Me" password="heysexy!" />
       <Present
         key={2}
-        image="swing"
-        name="1.5hr E-Foil Lesson Together"
-        password="test3"
+        image="secret3"
+        name="90min E-Foil Lesson For Two"
+        password="makemewet"
       />
     </div>
   );
