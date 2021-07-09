@@ -16,16 +16,13 @@ function JDSToolbarItem(props: {
   isSelected: boolean,
   label: string,
   onClick: () => void,
-}) {
-  if (props.isSelected) {
-    console.log(props.label);
-  }
+}): React.MixedElement {
   return (
     <div
-      className={`JDSToolbarButton${props.isSelected ? ' selected' : ''}`}
+      className={`JDSToolbarItem${props.isSelected ? ' selected' : ''}`}
       onClick={props.onClick}
     >
-      {props.label}
+      <div className="JDSToolbarItemInner">{props.label}</div>
     </div>
   );
 }
