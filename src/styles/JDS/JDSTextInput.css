@@ -1,0 +1,9 @@
+.JDSTextInput {
+  display: flex;
+  font-weight: bold;
+  justify-content: space-between;
+}
+
+.JDSTextInput > * {
+  margin: 0 4px;
+}

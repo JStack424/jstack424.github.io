@@ -5,14 +5,17 @@
 import * as React from 'react';
 import { useState } from 'react';
 
+import '~/styles/JDS/JDSTextInput.css';
+
 function JDSTextInput(props: {
+  label?: string,
   showButton?: boolean,
   onSubmit: (string) => void,
 }): React.MixedElement {
   const [val, setVal] = useState('');
-
   return (
-    <>
+    <div className="JDSTextInput">
+      {props.label != null && <span>{props.label}</span>}
       <input
         type="text"
         id="inputBox"
@@ -41,7 +44,7 @@ function JDSTextInput(props: {
           Submit
         </button>
       )}
-    </>
+    </div>
   );
 }
 
