@@ -30,13 +30,15 @@ export default function HomePage(): React.MixedElement {
   const [selectedTabID, setTabID] = useState<TabType>('About');
   const onClickTab = useCallback((id: TabType) => setTabID(id), [setTabID]);
   return (
-    <>
+    <div id="Home">
       <JDSToolbar
         tabIDs={['About', 'News', 'Presents']}
         selectedTab={selectedTabID}
         onClick={onClickTab}
       />
-      <PageContents selectedTabID={selectedTabID} />
-    </>
+      <div class="Contents">
+        <PageContents selectedTabID={selectedTabID} />
+      </div>
+    </div>
   );
 }

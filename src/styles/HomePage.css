@@ -1,0 +1,11 @@
+#Home {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+#Home .Contents {
+  flex-grow: 1;
+  background: linear-gradient(white, rgb(84, 120, 252));
+  overflow: scroll;
+}

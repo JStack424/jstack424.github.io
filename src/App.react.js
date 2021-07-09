@@ -40,6 +40,12 @@ class ErrorBoundary extends React.Component<
 
 export default function App(): React.MixedElement {
   const [pageID, setPageID] = useState<string>('welcome');
+
+  // For development, don't forget to delete
+  if (pageID === 'welcome') {
+    // setPageID('home');
+  }
+
   const onEnter = useCallback(() => setPageID('home'), [setPageID]);
 
   let contents = null;

@@ -1,0 +1,35 @@
+#AboutPage {
+  display: flex;
+  height: 100%;
+
+  font-family: 'Architects Daughter';
+}
+
+#AboutPage #LeftColumn {
+  width: 400px;
+  border-right: 2px solid black;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+#AboutPage #LeftColumn h1 {
+  font-size: 3em;
+  text-decoration: underline;
+  margin: 12px 0;
+}
+
+#AboutPage #LeftColumn img {
+  width: 200px;
+  border-radius: 48px;
+}
+
+#AboutPage #LeftColumn #Details {
+  font-size: 1.2em;
+}
+
+img {
+  width: 200px;
+}

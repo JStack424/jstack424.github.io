@@ -28,7 +28,7 @@ export default function WelcomePage(props: {
       <div className="welcomeText">
         <h1>HAPPY BIRTHDAY EMILY</h1>
         <h2>❤️ Love Joe ❤️</h2>
-        <JDSTextInput label="Password" showButton onSubmit={onSumbit} />
+        <JDSTextInput label="Password" onSubmit={onSumbit} />
       </div>
     </div>
   );
